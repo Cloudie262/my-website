@@ -1,120 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn2Drive</title>
+  <link rel="stylesheet" href="drive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Top bar -->
+  <nav class="topbar">
+    <div class="logo">
+      <i class="bx bx-menu menu-icon"></i>
+      <span class="nama-logo">Emily Johnson</span>
+    </div>
+  </nav>
 
-        <title>
-            Learn2Drive
-        </title>
-        <link rel="stylesheet" type="text/css" href="drive.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="#"><i class="fa-solid fa-lightbulb"></i> Knowledge Sharing</a></li>
+      <li><a href="#"><i class="fa-solid fa-file-pen"></i> Practice Test</a></li>
+      <li><a href="#"><i class="fa-solid fa-triangle-exclamation"></i> Road Signs</a></li>
+      <li><a href="#"><i class="fa-solid fa-phone"></i> Hotline</a></li>
+      <li><a href="#"><i class="fa-solid fa-user"></i> My Profile</a></li>
+      <li><a href="#"><i class="fa-solid fa-clock"></i> Test History</a></li>
+      <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+      <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a></li>
+    </ul>
+  </aside>
 
-    </head> 
-    <body>       
-        <nav>
-            <div class="logo">
-                <i class="bx bx-menu menu-icon"></i>
-                <span class="nama-logo"><img src="download (5).jpg" width="80px" height="80px">Emily Johnson
-            </span>
-            </div>
-            </nav>
-            <div class="sidebar">
-                <div class="logo">
-                    <i class="bx bx-menu menu-icon"></i>
-                    <span class="nama-logo">Emily Johnson
-            </span>
-            
-            </div>
-            <div class="sidebar-content">
-                <ul class="daftar">
-                    <li class="daftar-icon">
-                        <a href="#" class="nav-link">
-                            <i class="fa-solid fa-house"></i>
-                            <span class="text">Home</span>
-                        </a>
-                    </li>
+  <!-- Overlay -->
+  <section class="hola"></section>
 
-                    <li class="daftar-icon">
-                        <a href="#" class="nav-link">
-                            <i class="fa-solid fa-lightbulb"></i>
-                            <span class="text">Knowledge Sharing</span>
-                        </a>
-                    </li>
+  <!-- Main content -->
+  <main class="content">
+    <h1>Prepare. Practice. Drive with Confidence.</h1>
+    <p>Your one-stop platform for driver license test practice, knowledge sharing, road signs and important contacts.</p>
+    <button>Start Practice Test</button>
+  </main>
 
-                    <li class="daftar-icon">
-                        <a href="#" class="nav-link">
-                            <i class="fa-solid fa-file-pen"></i>
-                            <span class="text">Practice Test</span>
-                        </a>
-                    </li>
-                    
-                    <li class="daftar-icon">
-                        <a href="#" class="nav-link">
-                            <i class="fa-solid fa-triangle-exclamation"></i>
-                            <span class="text">Road Signs</span>
-                        </a>
-                    </li>
+  <script>
+    const menuIcon = document.querySelector(".menu-icon");
+    const sidebar = document.querySelector(".sidebar");
+    const overlay = document.querySelector(".hola");
 
-                     <li class="daftar-icon">
-                        <a href="#" class="nav-link">
-                            <i class="fa-solid fa-phone"></i>
-                            <span class="text">Hotline</span>
-                        </a>
-                    </li>
+    menuIcon.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      overlay.classList.toggle("show");
+    });
 
-                    <li class="daftar-icon">
-                        <a href="#" class="nav-link">
-                            <i class="fa-solid fa-user"></i>
-                            <span class="text">My Profile</span>
-                        </a>
-                    </li>
+    overlay.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+      overlay.classList.remove("show");
+    });
+  </script>
 
-                    <li class="daftar-icon">
-                        <a href="#" class="nav-link">
-                            <i class="fa-solid fa-clock"></i>
-                            <span class="text">Test History</span>
-                        </a>
-                    </li>
-
-                    <li class="daftar-icon">
-                        <a href="#" class="nav-link">
-                            <i class="fa-solid fa-gear"></i>
-                            <span class="text">Setting</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <div class="bottom-content">
-                    <li class="daftar-icon">
-                        <a href="#" class="nav-link">
-                            <i class="fa-solid fa-right-from-bracket"></i>
-                            <span class="text">Log Out</span>
-                        </a>
-                    </li>
-                    </div>
-                </div>
-            </div>
-        
-
-        <section class="hola"></section>
-        <script>
-            const Navbar = document.querySelector("nav"),
-            TombolMenu = document.querySelectorAll(".menu-icon"),
-            hola = document.querySelector(".hola");
-
-            TombolMenu.forEach((TombolMenu) => {
-                TombolMenu.addEventListener("click", () => {
-                    Navbar.classList.toggle("open");
-                });
-            });
-
-            hola.addEventListener("click", () => {
-                Navbar.classList.toggle("open");
-            });
-        </script>
-            <div class="nav1">
+              <div class="nav1">
                 <h1>Prepare. Practice. Drive with Confidence.</h1>
                 <p>Your one-stop platform for driver license test<br>
                 practice, knowledge sharing, road signs and<br>important contacts.</p>
