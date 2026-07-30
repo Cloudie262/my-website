@@ -93,7 +93,21 @@
         </nav>
 
         <section class="hola"></section>
-        <script src="script.js"></script>
+        <script src="script.js">
+            const Navbar = document.querySelector("nav"),
+            TombolMenu = document.querySelectorAll(".menu-icon"),
+            hola = document.querySelector(".hola");
+
+            TombolMenu.forEach((TombolMenu) => {
+                TombolMenu.addEventListener("click", () => {
+                    Navbar.classList.toggle("open");
+                });
+            });
+
+            hola.addEventListener("click", () => {
+                Navbar.classList.toggle("open");
+            });
+        </script>
             <div class="nav1">
                 <h1>Prepare. Practice. Drive with Confidence.</h1>
                 <p>Your one-stop platform for driver license test<br>
