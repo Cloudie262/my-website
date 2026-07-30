@@ -1,0 +1,14 @@
+ #div1 {background-color: rgb(165, 142, 42); color:brown; border: 1px solid black;}
+        #div {column-count: 2; border: 1px solid black;}
+        .columncount1 {background-color: beige; width: 200px; height: 400px;line-height: 30pt;
+        position:absolute; top:90px; left:9px;}
+        .columncount1 ul {list-style-type: none;}
+        .columncount1 li {display: block;}
+        .columncount1 a {text-decoration: none;}
+        .columncount2 {background-color:rgb(234, 234, 142); width: 1280px; height: 400px;line-height: 30pt;
+        position:absolute; top:90px; left:200px;right: 1275px;}
+        .columncount2 p {font-family: 'Courier New', Courier, monospace; line-height: 10pt;}
+        .columncount2 img {float:right; width: 200px; height: 200px;}
+        .columncount2 p.p1 {font-family: 'Courier New', Courier, monospace; padding: 5px; line-height: 20pt;}
+        #div4 {border: 1px solid black; background-color: bisque; font-size: x-small; text-align: center;
+        position:absolute; width:1465px; top:490px;left:9px; right:1465px;}

@@ -1,0 +1,11 @@
+body {font-family: 'Times New Roman', Times, serif; background-color: #00005D;}
+#wrapper {background-color: #b3c7e6; width: 80%;
+margin: auto; min-width: 150px;}
+nav {float: left; width: 150px;}
+#leftcol {margin-left: 15px; background-color: #000000; color: #ffffff;}
+#rightcol {margin-left: 155px; background-color: #ffffff; color: #000000;}
+header {background-color: #869dc7; color: #00005D; font-size: 150%; padding: 30px;}
+h2 {color: #869dc7; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+#floatright {margin: 10px; float: right;}
+footer {font-size: 70%; text-align: center; clear:right; padding-bottom: 20px;}
+a {margin: 30px;}

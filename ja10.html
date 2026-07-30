@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login Page</title>
+    </head>
+    <body>
+    <h2>Login</h2>
+    <label for="Name">Username:</label>
+    <input type="text" name="Name" id="Name"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password"><br><br>
+
+    <button type="button" onclick="displaydata()">Login</button>
+    <p id="output"></p>
+    <script type="text/javascript">
+        function displaydata() {
+            let name = document.getElementById("Name").value;
+            let password = document.getElementById("password").value;
+            document.getElementById("output").innerHTML = 
+            "Entered Username:" + name + "<br>" +
+            "Entered Password:" + password;
+
+        }
+    </script>
+    
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>Student Registration</h1>
+        <form>
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="id">Student ID:</label>
+            <input type="text" id="id" name="id"><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"><br><br>
+
+            <h2>Gender:</h2>
+            
+            <input type="radio" name="gender" id="male" value="male" checked="checked">
+            <label for="male">Male:</label><br><br>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female:</label><br><br>
+
+            <h2>Course:</h2>
+            <select name="CS" id="CS">
+            <option value="CS">Computer Science</option>
+            <option value="SE">Software Engineering</option>
+            <option value="BIS">Business Information System</option>
+            <option value="KE">Knowledge engineering</option>
+            </select>
+            <button type="button" onclick="displaydata()">Register</button>
+            <h2 id="result">Results:</h2>
+            <script type="text/javascript">
+                function displaydata() {
+                    let name = document.getElementById("name").value;
+                    let id = document.getElementById("id").value;
+                    let age = document.getElementById("age").value;
+                    let gender;
+                    if (document.getElementById("male").checked)
+                {
+                    gender = document.getElementById("male").value;
+                }
+                   else
+                {
+                    gender = document.getElementById("female").value;
+                }
+                    let course = document.getElementById("CS").value;
+                if (name === "" || id === "" || age === "" || gender === "" || course === "")
+                {
+                    alert("*required");
+                    return;
+                }
+                document.getElementById("result").innerHTML = 
+                 "Name:" + name + "<br>" +
+                 "ID:" + id + "<br>" + 
+                 "Age:" + age + "<br>" +
+                 "Gender:" + gender + "<br>" +
+                 "Course:" + course;
+                
+                }
+            </script>
+        </form>
+    </body>
+</html>

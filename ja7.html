@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>Personal Information Form</h1>
+        <form>
+            <label for="username">Name</label><br>
+            <input type="text" id="username"><br>
+            <br><br>
+            <label for="userage">Age</label><br>
+            <input type="number" id="userage"><br><br>
+            <button type="button" onclick="DisplayData()">Data Submit</button>
+            <h3>Information</h3>
+            <p id="outputText"></p>
+            <script type="text/javascript">
+                function DisplayData() {
+                    let name = document.getElementById("username").value;
+                    let age = document.getElementById("userage").value;
+                if (name === "" && age === "") {
+                    alert("*required");
+                    return;
+                    }
+                }
+                let message = "Hello " + name + "Your age is " + age;
+                document.getElementById("outputText").innerHTML = message;
+                
+            </script>
+        </form>
+    </body>
+</html>

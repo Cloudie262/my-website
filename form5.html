@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form action="action_page.php">
+            <fieldset><legend>Student Information</legend>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname">
+            <label type="password">Your Password</label>
+            <input type="password" id="password" name="password">
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br><br>
+            <input type="radio" id="female" name="gender" value="female" checked="checked">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+
+            <label for="class">Choose from here:</label>
+            <select name="class" id="class">
+                <option value="FirstYear">First Year</option>
+                <option value="SecondYear">Second Year</option>
+                <option value="ThirdYear">Third Year</option>
+            </select><br><br>
+
+            <input type="checkbox" name="pen" value="Pen">
+            <label for="pen">I have a pen</label><br>
+            <input type="checkbox" name="book" value="Book">
+            <label for="book">I have a book.</label><br>
+            <input type="checkbox" name="ebook" value="Ebook">
+            <label for="ebook">I have an Ebook</label><br><br>
+
+            <textarea name="comment" id="id1" rows="4" cols="50">
+                Enter your comments here!
+            </textarea><br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            </fieldset>
+
+        </form>
+    </body>
+</html>

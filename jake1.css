@@ -1,0 +1,17 @@
+ div {border: 1px solid black;}
+ #div1 {background-color: rgb(165, 142, 42); color:brown; border: 1px solid black;}
+ .h1{margin:0;}
+ .nav{float:left;}
+ .rightcol {margin-left: 200px; background-color: black; color: black;height: 400px;} 
+ .leftcol {margin-left: 0px; width:200px; background-color: burlywood; color: black; height: 400px;}  
+.rightcol {background-color: beige; width: 150px; height: 400px;line-height: 30pt;}
+.leftcol ul {list-style-type: none;}
+.leftcol li {display: block;}
+.leftcol a {text-decoration: none;}
+.rightcol{background-color:rgb(234, 234, 142); width: 1275px; height: 400px;line-height: 30pt;
+        }
+.rightcol p {font-family: 'Courier New', Courier, monospace; line-height: 10pt;}
+.rightcol img {float:right; width: 200px; height: 200px;}  
+p.p1 {font-family: 'Courier New', Courier, monospace; padding: 5px; line-height: 20pt;}
+#div4 {border: 1px solid black; background-color: bisque; font-size: x-small; text-align: center;
+        }

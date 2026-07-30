@@ -1,0 +1,8 @@
+body {background-image: url("images (1).jpg"); background-repeat: repeat-y;background-color: black;}
+h2 {text-align: center; text-decoration: line-through;font-size: larger;} 
+p.ex1 {color:aquamarine; text-decoration: wavy;font-size:large;}   
+p.ex2 {color:blanchedalmond; text-decoration: solid; font-size: large;}
+p.ex3 {color: aliceblue; text-decoration: solid; font-size: large;}
+p.ex4 {line-height: 20pt; text-indent: 3%;color:blueviolet;}
+p.ex5 {line-height: 20pt; text-indent: 3%;color:azure;}
+ol {color:pink; font-family: 'Times New Roman', Times, serif;}

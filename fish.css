@@ -1,0 +1,6 @@
+body {background-color: rgb(152, 152, 179);}
+h1 {border : 1px solid black; padding : 35px; background-image:url("images.jpg"); background-clip: border-box; color:beige; line-height: 50pt;}
+div {padding : 20px; background-image: url("images (2).jpg"); background-clip: border-box; border : 1px solid black; line-height: 10pt;}
+h1 {color:beige; text-align: left; font-size:xx-large;}
+p {text-indent: 10%; font-size:larger;}
+B {text-align: left; color:bisque;}

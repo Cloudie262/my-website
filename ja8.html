@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>Simple Calculator</h1>
+        <form>
+            <label for="FirstNum">First Number</label>
+            <input type="number" id="FirstNum"><br><br>
+
+            <label for="secnum">Second Number</label>
+            <input type="number" id="secnum"><br><br>
+
+            <button type="button" onclick="calculate()">Calculate</button>
+            
+            <p id="Result"></p>
+            </form>
+            <script type="text/javascript">
+                function calculate() {
+                    let FirstNumber = Number(document.getElementById("FirstNum").value);
+                    let SecondNumber = Number(document.getElementById("secnum").value);
+
+                    let sum = FirstNumber + SecondNumber;
+                    
+                    document.getElementById("Result").innerHTML = "Result:" + sum;
+                }
+            </script>       
+    </body>
+</html>
