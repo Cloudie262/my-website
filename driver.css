@@ -1,0 +1,27 @@
+#nav {justify-content: center; display:flex;
+        padding: 15px 0; font-weight: bold;}
+#nav li{display: inline;}
+#nav ul{list-style-type: none;}
+#nav a{text-decoration: none;}
+
+
+
+
+#rightcol {border: 1px solid white; background-color: white;
+         float:right; position:absolute; top : 150px; right: 50px;
+        width:25%; height:40%;
+        padding: 20px;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+        
+}
+#rightcol p{column-count: 2; font-family: 'Times New Roman', Times, serif;
+             font-size: medium; font-weight: bold;}
+.name h4 { position: absolute; top: 70px; left:130px;}
+        #b1 {position:absolute;  top: 120px; left: 130px;}
+
+#b2 {width: 200px; text-align: center;background-color: greenyellow;}
+
+
