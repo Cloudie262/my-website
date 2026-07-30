@@ -11,7 +11,7 @@ body {
 #nav ul{list-style-type: none;}
 #nav a{text-decoration: none;}
 .nav1 {background-image: url(driving.jpg); background-size: cover;background-repeat: no-repeat;
-        background-position:center; background-attachment: scroll;
+        background-position:center; background-attachment: fixed;
         margin: 0; height: 70vh; display:flex; flex-direction: column;
         }
 .nav1 h1{font-family:'Times New Roman', Times, serif;
