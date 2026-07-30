@@ -1,15 +1,74 @@
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:lightblue;
-    
+
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
 }
 
-#nav {justify-content: center; display:flex;
-        padding: 15px 0; font-weight: bold;}
-#nav li{display: inline;}
-#nav ul{list-style-type: none;}
-#nav a{text-decoration: none;}
+/* Sidebar */
+
+#sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:230px;
+    height:100vh;
+    background:#2c3e50;
+    color:white;
+    padding:20px;
+}
+
+#sidebar .profile{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+#sidebar img{
+    border-radius:50%;
+}
+
+#sidebar h3{
+    margin:10px 0 5px;
+}
+
+#sidebar p{
+    color:#ccc;
+}
+
+#sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+#sidebar ul li{
+    margin:15px 0;
+}
+
+#sidebar ul li a{
+    color:white;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    padding:10px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+#sidebar ul li a i{
+    margin-right:10px;
+}
+
+#sidebar ul li a:hover{
+    background:#3498db;
+}
+
+/* Main Content */
+
+.main-content{
+    margin-left:250px;
+    padding:30px;
+}
 .nav1 {background-image: url(driving.jpg); background-size: cover;background-repeat: no-repeat;
         background-position:center; background-attachment: fixed;
         margin: 0; height: 70vh; display:flex; flex-direction: column;
