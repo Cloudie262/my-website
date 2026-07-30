@@ -1,13 +1,15 @@
-
-
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f4f4;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:lightblue;
+    
 }
 
-/* Sidebar */
-
+#nav {justify-content: center; display:flex;
+        padding: 15px 0; font-weight: bold;}
+#nav li{display: inline;}
+#nav ul{list-style-type: none;}
+#nav a{text-decoration: none;}
 .nav1 {background-image: url(driving.jpg); background-size: cover;background-repeat: no-repeat;
         background-position:center; background-attachment: fixed;
         margin: 0; height: 70vh; display:flex; flex-direction: column;
@@ -48,7 +50,6 @@ body{
         #b1 {position:absolute;  top: 120px; left: 130px;}
 
 #b2 {width: 200px; text-align: center;background-color: greenyellow;}
-
 .container {
   display: flex;              /* activate flexbox */
   justify-content: space-around; /* spread boxes evenly */
