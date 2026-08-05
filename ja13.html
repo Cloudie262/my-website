@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           var degF = new Array(90,192,55);
+           var degc = new Array();
+           var loopCounter;
+           for (loopCounter = 0; loopCounter <= 2; loopCounter++) {
+            degc[loopCounter] = 5/9*(degF[loopCounter] - 32);
+           }
+           for (loopCounter = 2; loopCounter >= 0; loopCounter-- ) {
+            document.write("Value " + loopCounter + " was " + degF[loopCounter] + " degree Fahrenheit");
+            document.write("which is" + degc[loopCounter] + " degree Centigrade<br>");
+           }
+            
+        </script>
+    </body>
+</html>

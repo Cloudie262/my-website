@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shopping Bill</title>
+</head>
+<body>
+    <display for="product">Product Name</display>
+    <input type="text" name="product" id="product">
+    <br><br>
+    <display for="price">Price</display>
+    <input type="text" name="price" id="price">
+    <br><br>
+    <display for="quantity">Quantity</display>
+    <input type="text" name="quantity" id="quantity">
+    <br><br>
+    <button type="button" onclick="display()" name="calculate" id="calculate">
+        Calculate
+    </button><br><br>
+    <p id="Product"></p>
+    <p id="Total"></p>
+    <script type="text/javascript">
+        function display() {
+            let product = document.getElementById("product").value;
+            let price = Number(document.getElementById("price").value);
+            let quantity = Number(document.getElementById("quantity").value);
+
+            document.getElementById("Product").innerHTML = "Product: " + product + "<br>";
+             document.getElementById("Total").innerHTML = "Total: " + price*quantity;
+            
+        }
+    </script>
+</body>
+</html>
