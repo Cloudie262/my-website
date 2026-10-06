@@ -1,76 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learn2Drive</title>
-  <link rel="stylesheet" href="drive.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7fbff">
+  <meta name="description" content="A little birthday surprise, made just for you.">
+  <title>A Gift For You — Birthday Surprise</title>
+  <link rel="stylesheet" href="chan.css">
+  <script src="chan.js" defer></script>
 </head>
 <body>
-  <!-- Sidebar -->
- <aside class="sidebar">
-  <div class="profile">
-    <img src="download (5).jpg"
-     alt="Emily Johnson Profile Picture"
-     width="80"
-     height="80">
-    
+  <div class="paper-grain" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <div class="site-shell">
+    <header class="story-header">
+      <div class="brand-lockup" aria-label="A little birthday story">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 40" focusable="false">
+            <path d="M5 9.5A4.5 4.5 0 0 1 9.5 5h29A4.5 4.5 0 0 1 43 9.5v21a4.5 4.5 0 0 1-4.5 4.5h-29A4.5 4.5 0 0 1 5 30.5z" fill="#49b7e7" />
+            <path d="m6.5 8 17.5 14L41.5 8" fill="none" stroke="#dff7ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+            <path d="m24 13 1.8 3.7 4.1.6-3 2.9.7 4.1-3.6-1.9-3.7 1.9.7-4.1-3-2.9 4.1-.6z" fill="#ffd965" />
+          </svg>
+        </span>
+        <span class="brand-copy">a little birthday story</span>
+      </div>
+
+      <div class="story-progress" aria-label="Surprise progress">
+        <span class="progress-count" id="progress-count">01 <i>/</i> 05</span>
+        <div class="progress-track" id="progress-track" role="progressbar" aria-label="Birthday surprise steps" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1">
+          <span class="progress-fill" id="progress-fill"></span>
+        </div>
+      </div>
+
+      <button class="back-button" id="back-button" type="button" aria-label="Go back one step" hidden>
+        <span aria-hidden="true">←</span> Back
+      </button>
+    </header>
+
+    <p class="sr-only" id="screen-announcement" aria-live="polite" aria-atomic="true"></p>
+
+    <main id="experience" class="experience">
+      <section class="screen screen-gift is-active" id="screen-gift" aria-labelledby="gift-title" aria-hidden="false" data-step="1">
+        <div class="scene-wash wash-gift" aria-hidden="true"></div>
+        <span class="float-spark spark-a" aria-hidden="true">✦</span>
+        <span class="float-spark spark-b" aria-hidden="true">✧</span>
+        <span class="float-heart heart-a" aria-hidden="true">♥</span>
+        <span class="float-dot dot-a" aria-hidden="true"></span>
+        <div class="screen-content gift-content">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Something awesome is waiting…</p>
+          <div class="gift-illustration" aria-hidden="true">
+            <span class="gift-glow"></span>
+            <span class="gift-bow bow-left"></span>
+            <span class="gift-bow bow-right"></span>
+            <span class="gift-lid"><i></i></span>
+            <span class="gift-box"><i></i></span>
+            <span class="gift-ribbon"></span>
+            <span class="gift-star">✦</span>
+          </div>
+          <h1 class="display-title" id="gift-title">A Gift<br><em>Just For You</em></h1>
+          <p class="intro-copy">Today is a day as awesome as you are.<br class="desktop-break"> I’ve prepared a little digital surprise to celebrate your special moment.</p>
+          <button class="primary-button" id="open-gift" type="button">
+            Open Your Surprise <span class="button-emoji" aria-hidden="true">🎁</span>
+          </button>
+          <p class="tiny-note">go on… it’s all yours</p>
+        </div>
+        <div class="edge-decoration bunting" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </section>
+
+      <section class="screen screen-cake" id="screen-cake" aria-labelledby="cake-title" aria-hidden="true" data-step="2" hidden>
+        <div class="scene-wash wash-cake" aria-hidden="true"></div>
+        <span class="float-spark spark-c" aria-hidden="true">✦</span>
+        <span class="float-balloon balloon-a" aria-hidden="true"></span>
+        <span class="float-balloon balloon-b" aria-hidden="true"></span>
+        <div class="screen-content cake-content">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Make a wish, Chan"</p>
+          <div class="cake-illustration" id="cake-illustration" role="img" aria-label="A bright blue birthday cake with a candle burning">
+            <div class="cake-shadow"></div>
+            <div class="cake-stand"></div>
+            <div class="cake-bottom"><span class="cake-dot dot-one"></span><span class="cake-dot dot-two"></span><span class="cake-dot dot-three"></span><span class="bottom-icing"></span></div>
+            <div class="cake-middle"><span class="frosting-drip drip-one"></span><span class="frosting-drip drip-two"></span><span class="frosting-drip drip-three"></span><span class="frosting-drip drip-four"></span><span class="frosting-drip drip-five"></span><span class="cake-star">✦ ✦ ✦</span></div>
+            <div class="cake-top"><span class="top-icing"></span></div>
+            <div class="candle" id="candle"><span class="candle-stripe"></span><span class="flame" id="flame"></span><span class="smoke" id="smoke"></span></div>
+          </div>
+          <h2 class="scene-title" id="cake-title" aria-live="polite">Make a wish, Chan"</h2>
+          <p class="scene-copy" id="cake-copy">Take a breath, think of something wonderful, then blow out your candle.</p>
+          <div class="button-stack">
+            <button class="primary-button blue-button" id="cake-action" type="button">
+              <span id="cake-action-label">Blow the Candle</span> <span class="button-emoji" id="cake-action-emoji" aria-hidden="true">💨</span>
+            </button>
+            <button class="text-button" id="relight-candle" type="button" hidden>Light it again <span aria-hidden="true">✨</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen screen-envelope" id="screen-envelope" aria-labelledby="envelope-title" aria-hidden="true" data-step="3" hidden>
+        <div class="scene-wash wash-envelope" aria-hidden="true"></div>
+        <span class="float-spark spark-d" aria-hidden="true">✧</span>
+        <span class="float-heart heart-b" aria-hidden="true">♥</span>
+        <div class="screen-content envelope-content">
+          <p class="eyebrow"><span class="eyebrow-line"></span> One more little surprise</p>
+          <button class="envelope-button" id="open-envelope" type="button" aria-label="Open the blue envelope" aria-expanded="false">
+            <span class="envelope-art" aria-hidden="true">
+              <span class="envelope-letter"></span>
+              <span class="envelope-back"></span>
+              <span class="envelope-flap"></span>
+              <span class="envelope-front"></span>
+              <span class="envelope-seal"><span>✦</span></span>
+            </span>
+          </button>
+          <h2 class="scene-title" id="envelope-title">A note, just for you</h2>
+          <p class="scene-copy">There’s a little something waiting inside.<br>Tap the seal to take a peek.</p>
+          <button class="primary-button blue-button" id="envelope-action" type="button">Open Your Letter <span class="button-emoji" aria-hidden="true">💌</span></button>
+        </div>
+      </section>
+
+      <section class="screen screen-letter" id="screen-letter" aria-labelledby="letter-title" aria-hidden="true" data-step="4" hidden>
+        <div class="scene-wash wash-letter" aria-hidden="true"></div>
+        <div class="letter-content">
+          <div class="letter-paper">
+            <span class="paper-stamp" aria-hidden="true">✦</span>
+            <p class="eyebrow letter-eyebrow">A little note for you</p>
+            <h2 id="letter-title" class="letter-title">Dear birthday star,</h2>
+            <div class="letter-body">
+              <p>Today is your day — a little reminder of how much joy you bring to the people around you.</p>
+              <p>I hope this next trip around the sun is filled with brave dreams, belly laughs, new adventures, and all the little things that make you smile.</p>
+              <p>Make a wish, celebrate every bit of you, and know that someone is cheering you on today and always.</p>
+            </div>
+            <p class="letter-signoff">With warmest wishes,<br><span>someone who thinks you’re wonderful</span></p>
+            <div class="letter-flourish" aria-hidden="true">♥ &nbsp; ✦ &nbsp; ♥</div>
+          </div>
+          <button class="primary-button blue-button letter-next" id="letter-next" type="button">Turn the page <span class="button-emoji" aria-hidden="true">📸</span></button>
+        </div>
+      </section>
+
+      <section class="screen screen-memories" id="screen-memories" aria-labelledby="memories-title" aria-hidden="true" data-step="5" hidden>
+        <div class="scene-wash wash-memories" aria-hidden="true"></div>
+        <div class="memories-content">
+          <div class="memories-heading">
+            <p class="eyebrow"><span class="eyebrow-line"></span> The little things worth keeping</p>
+            <h2 class="display-title memory-title" id="memories-title">Memory <em>recap</em></h2>
+            <p class="scene-copy">A tiny album of this birthday surprise.<br>Tap a photo to see it a little bigger.</p>
+          </div>
+          <div class="memory-gallery" id="memory-gallery" aria-label="Birthday memory photos">
+            <figure class="memory-card memory-one">
+              <button class="memory-photo" type="button" aria-label="View memory: A gift, just for you">
+                <img src="photo_2026-10-06_22-25-25.jpg" alt="A birthday surprise waiting to be opened" loading="lazy">
+                <span class="photo-number" aria-hidden="true">01</span>
+              </button>
+              <figcaption>A gift, just for you <span aria-hidden="true">✦</span></figcaption>
+            </figure>
+            <figure class="memory-card memory-two">
+              <button class="memory-photo" type="button" aria-label="View memory: Make a wish">
+                <img src="photo_2026-10-06_22-25-27.jpg" alt="A blue birthday cake with its candle lit" loading="lazy">
+                <span class="photo-number" aria-hidden="true">02</span>
+              </button>
+              <figcaption>Make a wish <span aria-hidden="true">♡</span></figcaption>
+            </figure>
+            <figure class="memory-card memory-three">
+              <button class="memory-photo" type="button" aria-label="View memory: Happy birthday, hero">
+                <img src="photo_2026-10-06_22-25-28.jpg" alt="Happy Birthday, Hero, with a blue celebration cake" loading="lazy">
+                <span class="photo-number" aria-hidden="true">03</span>
+              </button>
+              <figcaption>Happy birthday, hero <span aria-hidden="true">✦</span></figcaption>
+            </figure>
+            <figure class="memory-card memory-four">
+              <button class="memory-photo" type="button" aria-label="View memory: A little note for you">
+                <img src="photo_2026-10-06_22-25-29.jpg" alt="A little blue envelope sealed with a star" loading="lazy">
+                <span class="photo-number" aria-hidden="true">04</span>
+              </button>
+              <figcaption>A little note for you <span aria-hidden="true">♥</span></figcaption>
+            </figure>
+          </div>
+          <div class="memory-actions">
+            <label class="upload-button" for="memory-upload">Add your own memories <span aria-hidden="true">＋</span></label>
+            <input class="sr-only" id="memory-upload" type="file" accept="image/*" multiple>
+            <p class="upload-hint" id="upload-hint"></p>
+          </div>
+          <button class="restart-button" id="restart-story" type="button">Read it all again <span aria-hidden="true">↗</span></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="story-footer"><span class="footer-star" aria-hidden="true">✦</span> made with a little extra sparkle <span class="footer-star" aria-hidden="true">✦</span></footer>
   </div>
 
-  <nav>
-    <ul class="menu">
-      <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="#"><i class="fa-solid fa-lightbulb"></i> Knowledge Sharing</a></li>
-      <li><a href="#"><i class="fa-solid fa-file-pen"></i> Practice Test</a></li>
-      <li><a href="#"><i class="fa-solid fa-triangle-exclamation"></i> Road Signs</a></li>
-      <li><a href="#"><i class="fa-solid fa-phone"></i> Hotline</a></li>
-      <li><a href="#"><i class="fa-solid fa-user"></i> My Profile</a></li>
-      <li><a href="#"><i class="fa-solid fa-clock"></i> Test History</a></li>
-      <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
-      <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
-    </ul>
-  </nav>
-</aside>
+  <dialog class="photo-dialog" id="photo-dialog" aria-label="Birthday photo preview">
+    <button class="dialog-close" id="dialog-close" type="button" aria-label="Close photo preview">×</button>
+    <img id="dialog-image" src="" alt="">
+    <p id="dialog-caption"></p>
+  </dialog>
+  
 
-  <!-- Main content -->
-  <main class="content">
-    <section class="banner">
-      <h1>Prepare. Practice. Drive with Confidence.</h1>
-      <p>Your one-stop platform for driver license test practice, knowledge sharing, road signs and important contacts.</p>
-      <button>Start Practice</button>
-      <button>View Hotline →</button>
-    </section>
 
-    <section class="container">
-      <div class="box purple">
-        <h3>Knowledge Sharing Session</h3>
-        <p>Learn driving rules, safety tips, and important information.</p>
-        <button>Explore →</button>
-      </div>
-      <div class="box green">
-        <h3>Practice Test</h3>
-        <p>Take practice tests similar to the real exam and check your knowledge.</p>
-        <button>Start Test →</button>
-      </div>
-      <div class="box yellow">
-        <h3>Road Sign Session</h3>
-        <p>Learn all road signs and their meanings with easy examples.</p>
-        <button>View Signs →</button>
-      </div>
-      <div class="box pink">
-        <h3>Hotline Number</h3>
-        <p>Important contact numbers for emergencies and assistance.</p>
-        <button>View Hotline →</button>
-      </div>
-    </section>
-
-    <footer>
-      © 2024 DriveLearn. All rights reserved. | About Us | Privacy Policy | Terms of Use
-    </footer>
-  </main>
 </body>
 </html>
-
